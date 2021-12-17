@@ -30,8 +30,8 @@ public class receiveReport {
         this.isiLaporan = isiLaporan;
     }
 
-    public Customer getPelapor() {
-        return Pelapor;
+    public String getPelapor() {
+        return Pelapor.getNama();
     }
     
     

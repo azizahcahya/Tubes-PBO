@@ -1,25 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tubes.pbo;
 
 /**
  *
  * @author Asus
  */
-public class Customer extends Tiang{
+public class Customer {
     private String ID_Customer;
     private String Nama;
     private String Alamat;
     private receiveReport laporan;
     private returnReport Hasil;
+    private Tiang T;
 
-    public Customer(String ID_Customer, String Nama, String Alamat) {
+    public Customer(String ID_Customer, String Nama, String Kode_Tiang) {
+        T = new Tiang(Kode_Tiang);
         this.ID_Customer = ID_Customer;
         this.Nama = Nama;
-        this.Alamat = Alamat;
+        
     }
 
     public String getID_Customer() {
@@ -46,12 +43,15 @@ public class Customer extends Tiang{
         this.Alamat = Alamat;
     }
 
-    public void setLaporan(receiveReport laporan) {
-        this.laporan = laporan;
+    public void setLaporan(String laporan) {
+        this.laporan.setIsiLaporan(laporan); 
+    }
+    public receiveReport getLaporan() {
+        return this.laporan; 
     }
 
-    public returnReport getHasil() {
-        return Hasil;
+    public boolean getHasil() {
+        return Hasil.getStatusLaporan();
     }
     
     

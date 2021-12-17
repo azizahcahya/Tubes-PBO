@@ -1,14 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tubes.pbo;
 
 /**
  *
  * @author Asus
  */
-public class PekerjaLapangan {
+public class PekerjaLapangan extends Employee{
+    private String DeskripsiTugas;
+    private Penjadwalan Report;
     
+    public PekerjaLapangan(String No_Identitas, String nama, String DeskripsiTugas) {
+        super(No_Identitas, nama);
+        setDeskripsiTugas(DeskripsiTugas);
+    }
+    public void setDeskripsiTugas(String DeskripsiTugas){
+        this.DeskripsiTugas = DeskripsiTugas;
+    }
+    
+ /*   public void setReport(returnReport Report){
+        this.Report.setDeskripsi(Report).setHasilLaporan(Report);
+    }*/
+    public String getDeskripsiTugas(){
+        return DeskripsiTugas;
+    }
+    @Override
+    public void info(){
+        
+    }
 }

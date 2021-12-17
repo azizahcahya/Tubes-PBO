@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tubes.pbo;
 
 /**
@@ -14,7 +9,10 @@ public class Tiang {
     private String Alamat_Tiang;
     private String Nama_ISP;
     private String Status;
-
+    
+    public Tiang(String Kode_Tiang){
+        setKode_Tiang(Kode_Tiang);
+    }
     public String getKode_Tiang() {
         return Kode_Tiang;
     }

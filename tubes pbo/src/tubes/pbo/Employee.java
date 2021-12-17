@@ -9,7 +9,7 @@ package tubes.pbo;
  *
  * @author Asus
  */
-public class Employee {
+public abstract class Employee {
     private String No_Identitas;
     private String Nama;
 
